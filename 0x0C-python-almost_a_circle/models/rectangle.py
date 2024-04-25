@@ -90,3 +90,66 @@ class Rectangle(Base):
             int: The area of the Rectangle.
         """
         return self.__width * self.__height
+
+    def display(self):
+        """
+        Prints the Rectangle instance with the character '#'.
+        """
+        for _ in range(self.__y):
+            print()
+        for _ in range(self.__height):
+            print(" " * self.__x + "#" * self.__width)
+
+    def __str__(self):
+        """
+        Returns a string representation of the Rectangle instance.
+
+        Returns:
+            str: A string representation of the Rectangle instance.
+        """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.__x, self.__y, self.__width, self.__height
+        )
+
+    def update(self, *args, **kwargs):
+        """
+        Updates the attributes of the Rectangle instance.
+
+        Args:
+            *args: Variable length argument list.
+                - args[0]: Assigns the id attribute.
+                - args[1]: Assigns the width attribute.
+                - args[2]: Assigns the height attribute.
+                - args[3]: Assigns the x attribute.
+                - args[4]: Assigns the y attribute.
+            **kwargs: Variable length keyword argument dictionary.
+                - id: Assigns the id attribute.
+                - width: Assigns the width attribute.
+                - height: Assigns the height attribute.
+                - x: Assigns the x attribute.
+                - y: Assigns the y attribute.
+        """
+        if args and len(args) > 0:
+            attrs = ["id", "width", "height", "x", "y"]
+            for i, arg in enumerate(args):
+                if i < len(attrs):
+                    setattr(self, attrs[i], arg)
+        else:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
+
+    def to_dictionary(self):
+        """
+        Returns the dictionary representation of a Rectangle instance.
+
+        Returns:
+            dict: A dictionary representation of the Rectangle instance.
+        """
+        return {
+            "id": self.id,
+            "width": self.__width,
+            "height": self.__height,
+            "x": self.__x,
+            "y": self.__y,
+        }
