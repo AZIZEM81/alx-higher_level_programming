@@ -2,7 +2,7 @@
 
 // Define the Rectangle class
 class Rectangle {
-  constructor(w, h) {
+  constructo r(w, h) {
     if (w > 0 && h > 0) {
       this.width = w;
       this.height = h;
