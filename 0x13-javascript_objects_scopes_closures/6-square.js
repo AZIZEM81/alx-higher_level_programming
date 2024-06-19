@@ -5,7 +5,7 @@ const SquareBase = require('./5-square');
 
 // Define the new Square class that extends the imported class
 class Square extends SquareBase {
-  charPrint(c) {
+  charPrint (c) { // Add a space here
     if (c === undefined) {
       c = 'X';
     }
