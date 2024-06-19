@@ -1,0 +1,6 @@
+emistandard: Semicolons For All! (https://github.com/standard/semistandard)
+semistandard: Run `semistandard --fix` to automatically fix some problems.
+  /alx-higher_level_programming/0x13-javascript_objects_scopes_closures/3-rectangle.js:12:8: Missing space before function parentheses. (space-before-function-paren)
+root@d0c174ff9d54:/alx-higher_level_programming/0x13-javascript_objects_scopes_closures# 
+root@d0c174ff9d54:/alx-higher_level_programming/0x13-javascript_objects_scopes_closures# 
+
