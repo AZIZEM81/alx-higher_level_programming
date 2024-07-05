@@ -1,3 +1,3 @@
 #!/bin/bash
-# GET request to URL and display body of 200 status response
-curl -sL -w "%{http_code}" "$1" -o /dev/null | grep -q "200" && curl -s "$1"
+# GET request to URL, display body of 200 status response
+curl -s -o /dev/null -w '%{http_code}' "$1" | grep -q "200" && curl -s "$1"
